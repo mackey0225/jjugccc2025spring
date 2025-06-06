@@ -1,0 +1,4 @@
+rootProject.name = 'jjugccc2025spring'
+
+include 'server'
+include 'client'
