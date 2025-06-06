@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.mackey0225.jjugccc2025spring;
+
+option java_package = "com.mackey0225.jjugccc2025spring.proto";
+option java_outer_classname = "JJUGCCCServiceProto";
+option java_multiple_files = true;
+
+service JJUGCCCService {
+  rpc Welcome (WelcomeRequest) returns (WelcomeResponse);
+  rpc RecommendTalks (RecommendRequest) returns (stream RecommendResponse);
+}
+
+message WelcomeRequest {
+  string name = 1;
+}
+
+message WelcomeResponse {
+  string message = 1;
+}
+
+message RecommendRequest {
+  string name = 1;
+  int32 number = 2;
+}
+
+message RecommendResponse {
+  string message = 1;
+}
